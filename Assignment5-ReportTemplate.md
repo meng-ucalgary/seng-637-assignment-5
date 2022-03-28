@@ -33,6 +33,15 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 ## Difficulties, challenges, and lessons learned
 
+1. While choosing tools for reliability testing, we had some difficulties in getting the right tool for our project.
+
+   - Our group first decided to test **SRTAT-SRE-tool**. This tool could import the sample data files but couldn't import the target data file. There wasn't any documentation available for the tool either, on how to use it and what input formats it supports.
+
+   - Then we tested **CASRE**. This tool couldn't even launch on 64-bit Windows 11 machine. Every executable we tried threw below error.
+     ![CASRE Error](images/casre_error.png)
+
+   - Finally, we tested **C-SFRAT** and it worked fine.
+
 ## Comments and feedback
 
 1. The assignment description document [`Assignment5.md`](Assignment5.md) is very detailed and comprehensive, and it was easy to follow.
