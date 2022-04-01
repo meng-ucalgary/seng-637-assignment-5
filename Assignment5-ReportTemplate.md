@@ -28,6 +28,14 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 ## Comparison of results
 
 ## Similarity and Differences between the two techniques
+The reliability demonstration chart and reliability growth testing are two different methods that measures reliability statistics, but are based on different parameters. 
+
+The reliability demonstration chart failure intensity objective has or has not been met and it is based on the willingness of the customer and developer to accept of falsely saying the failure intensity objective is met when it is not.
+
+Reliability growth testing, on the otherhand, helps to predict the failure curve through pre-defined failure curve models.
+
+Although they are used for different purposes, they both rely on the inter-failure times or MTTF.
+
 
 ## Division of team work
 
