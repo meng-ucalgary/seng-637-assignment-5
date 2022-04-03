@@ -57,7 +57,7 @@ Although they are used for different purposes, they both rely on the inter-failu
 
 
 ## Division of team work
-Michael worked on the Assessment using Reliability Growth Testing section.
+Michael worked on the Assessment using "Reliability Growth Testing" and the "Similarity and Differences between the two techniques" sections.
 
 ## Difficulties, challenges, and lessons learned
 
