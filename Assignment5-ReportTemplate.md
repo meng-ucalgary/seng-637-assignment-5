@@ -45,6 +45,16 @@ Intensity Plot
 
 ![Intensity plot](images/intensity.PNG)
 
+As can be seen from the plot, the failure rate and MTTF  for the original failure data and the predictions at the last interval (31) are:
+|  Dataset       | Failure Rate  (F/Interval)  | MTTF (intervals)   |
+| ---------------| ----------------------------|--------------------|
+| Raw Data       | 92/31 =  2.96               |1/2.96 = 0.337      |
+| DW3 Prediction | 91/31 = 2.94                | 1/2.94 = 0.341     |
+| GM Prediction  | 90/31  = 2.90               | 1/2.90 =  0.344    |
+
+Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
+
+
 ## Assessment using Reliability Demonstration Chart
 The RDC-11 Excel sheet was used for plotting RDC graphs. As it was only configured to plot 16 failures it had to be modified for this data. 
 The default risk profile was used:
