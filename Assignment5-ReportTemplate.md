@@ -27,9 +27,9 @@ For Reliability Growth Testing, after testing the tools suggested by the assignm
 
 For C-SFRAT, our approach is to first run the entire set of failure data with every model and covariate combination possible, and then figure out which model is best suitable for the behavior of the failure data. (see model_comparison.csv).
 
-For comparing the models, we will be using the AIC and BIC criterias that is computed by C-SFRAT, which are widely used in model selection. The model with the best AIC should have the greatest amount of variation using the fewest possible independent variables, and the lower the AIC score, the better. (source: https://www.scribbr.com/statistics/akaike-information-criterion/#:~:text=The%20AIC%20function%20is%202K,it%20is%20being%20compared%20to)
+For comparing the models, we will be using the AIC and BIC criterias that is computed by C-SFRAT, which are widely used in model selection. The model with the best AIC should have the greatest amount of variation using the fewest possible independent variables, and the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
 
-BIC, on the otherhand, provides a good estimation on the performance of the model for future data and is also the lower the BIC score the better (source: https://stanfordphd.com/BIC.html)
+BIC, on the otherhand, provides a good estimation on the performance of the model for future data and is also the lower the BIC score the better[[2]](https://stanfordphd.com/BIC.html).
 
 After analyzing the Model Comparison tables from CS-FRAT, we have found the models Discrete Weibull Type 3 with covariate F is the best model with AIC of 122.199 and BIC of 127.935. The second best model is Geometric Model with covariate F with AIC of 125.323 and BIC of 129.625.
 
@@ -46,11 +46,12 @@ Intensity Plot
 ![Intensity plot](images/intensity.PNG)
 
 As can be seen from the plot, the failure rate and MTTF for the original failure data and the predictions at the last interval (31) are:
-| Dataset | Failure Rate (F/Interval) | MTTF (intervals) |
-| ---------------| ----------------------------|--------------------|
-| Raw Data | 92/31 = 2.96 |1/2.96 = 0.337 |
-| DW3 Prediction | 91/31 = 2.94 | 1/2.94 = 0.341 |
-| GM Prediction | 90/31 = 2.90 | 1/2.90 = 0.344 |
+
+| Dataset        | Failure Rate (F/Interval) | MTTF (intervals) |
+| -------------- | ------------------------- | ---------------- |
+| Raw Data       | 92/31 = 2.96              | 1/2.96 = 0.337   |
+| DW3 Prediction | 91/31 = 2.94              | 1/2.94 = 0.341   |
+| GM Prediction  | 90/31 = 2.90              | 1/2.90 = 0.344   |
 
 Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
 
@@ -71,14 +72,15 @@ T = 2 , FC = 3
 Would be converted into time between failures as follows:
 
 At T = 1, there are two failures, it can be assumed that one is at T = 0.5 and the other is at T = 1 (0.5 after the first)
+
 | Failure Number | Time between failures |
-| -|--|
-|1 | 0.5|
-|2| 0.5|
-|1 | 0.5|
-|3| 0.33|
-|4 | 0.33|
-|5| 0.33|
+| -------------- | --------------------- |
+| 1              | 0.5                   |
+| 2              | 0.5                   |
+| 3              | 0.33                  |
+| 4              | 0.33                  |
+| 5              | 0.33                  |
+
 The first plot below shows the RDC graph using the calculated MTTF of the SUT, FIO = 92 failures/31 intervals = 2.97, giving MTTF = 1/2.97 = 0.337
 
 The second plot is the minimum MTTF for the system to be considered acceptable. This minimum was determined by changing the FIO until a minimum was found; where the SUT barely enters the accept region. It was determined the FIO was 675/31 = 21.77 failures per interval. Giving a MTTF of 0.046.
@@ -123,7 +125,7 @@ Michael worked on the Assessment using "Reliability Growth Testing" and the "Sim
 
 1. While choosing tools for reliability testing, we had some difficulties in getting the right tool for our project.
 
-   - Our group first decided to test **SRTAT-SRE-tool**. This tool could import the sample data files but couldn't import the target data file. There wasn't any documentation available for the tool either, on how to use it and what input formats it supports.
+   - Our group first decided to test **SRTAT-SRE-tool**. This tool could import the sample data files but couldn't import the target data file. There wasn't any documentation available for the tool either, on how to use it and what input formats it supports. The [help page](http://www.dtic.mil/dtic/tr/fulltext/u2/a275405.pdf) (under Help menu) for the tool was not available either.
 
    - Then we tested **CASRE**. This tool couldn't even launch on 64-bit Windows 11 machine. Every executable we tried threw below error.
      ![CASRE Error](images/casre_error.png)
