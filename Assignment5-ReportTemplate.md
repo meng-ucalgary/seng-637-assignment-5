@@ -174,9 +174,13 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
    - Finally, we tested **C-SFRAT** and it worked fine.
 
-2. The given Reliability Demonstration Chart (RDC) data was not in accordance with the given failure data of the SUT. The RDC had to be significantly modified to accept as many data points as given in the failure data.
+2. The given Reliability Demonstration Chart (RDC) data was not in accordance with the given failure data of the SUT. The RDC had to be significantly modified to accept the     necessary number of data points for the given failure data.
 
 3. The RDC chart did not properly graph the accept/continue/reject regions, modifying the risk profile did not change the graph.
+
+4. Failure data was not in the correct format for RDC. It was in the form of failures per interval, whereas the RDC sheet required that it be in time between failures.
+
+5. To convert failures per interval to time between failures it was assumed that the failures were uniformly distributed in each interval. However, this is unlikely and therefore the results are likely inaccurate.
 
 ## Comments and feedback
 
@@ -184,7 +188,9 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
 2. One of the recommended software **SRTAT-SRE-tool** is very hard to use. There is no documentation available for it as well.
 
-3. The Reliability Demonstration Chart should have allowed input of all the failure data.
+3. The Reliability Demonstration Chart should have allowed input of all the failure data. It was very difficult to get it to properly graph the data.
+
+4. There was very little documentation on the failure dataset.
 
 ## Contributors
 
