@@ -45,32 +45,47 @@ Intensity Plot
 
 ![Intensity plot](images/intensity.PNG)
 
-As can be seen from the plot, the failure rate and MTTF  for the original failure data and the predictions at the last interval (31) are:
-|  Dataset       | Failure Rate  (F/Interval)  | MTTF (intervals)   |
+As can be seen from the plot, the failure rate and MTTF for the original failure data and the predictions at the last interval (31) are:
+| Dataset | Failure Rate (F/Interval) | MTTF (intervals) |
 | ---------------| ----------------------------|--------------------|
-| Raw Data       | 92/31 =  2.96               |1/2.96 = 0.337      |
-| DW3 Prediction | 91/31 = 2.94                | 1/2.94 = 0.341     |
-| GM Prediction  | 90/31  = 2.90               | 1/2.90 =  0.344    |
+| Raw Data | 92/31 = 2.96 |1/2.96 = 0.337 |
+| DW3 Prediction | 91/31 = 2.94 | 1/2.94 = 0.341 |
+| GM Prediction | 90/31 = 2.90 | 1/2.90 = 0.344 |
 
 Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
 
-
 ## Assessment using Reliability Demonstration Chart
-The RDC-11 Excel sheet was used for plotting RDC graphs. As it was only configured to plot 16 failures it had to be modified for this data. 
+
+The RDC-11 Excel sheet was used for plotting RDC graphs. As it was only configured to plot 16 failures it had to be modified for this data.
 The default risk profile was used:
 
 -Discrimination Ratio (γ) = 2  
--Developer's Risk (α) = 0.1   
--User's Risk (β) = 0.1  
+-Developer's Risk (α) = 0.1  
+-User's Risk (β) = 0.1
 
-The first plot below shows the RDC graph using the calculated MTTF of the SUT, FIO = 92 failures/31 intervals = 2.97,  giving MTTF = 1/2.97 = 0.337
+The failure data had to be modified before plotting. As the data was given as failures per interval, not time between failures. This was done by assuming failures were uniformly distributed in each interval
+Ex:
+T = 1 , FC = 2
+T = 2 , FC = 3
 
-The second plot is the minimum MTTF for the system to be considered acceptable. This minimum was determined by changing the FIO until a minimum was found; where the SUT barely enters the accept region. It was determined the FIO was 675/31 = 21.77 failures per interval. Giving a MTTF of 0.046. 
+Would be converted into time between failures as follows:
 
-The third  plot is  double the minimum MTTF. This gives a MTTF of 0.092 and a FIO of 337.5/31 = 10.89 failures per inteval. In this case the SUT almost immediately goes into the reject region.
+At T = 1, there are two failures, it can be assumed that one is at T = 0.5 and the other is at T = 1 (0.5 after the first)
+| Failure Number | Time between failures |
+| -|--|
+|1 | 0.5|
+|2| 0.5|
+|1 | 0.5|
+|3| 0.33|
+|4 | 0.33|
+|5| 0.33|
+The first plot below shows the RDC graph using the calculated MTTF of the SUT, FIO = 92 failures/31 intervals = 2.97, giving MTTF = 1/2.97 = 0.337
+
+The second plot is the minimum MTTF for the system to be considered acceptable. This minimum was determined by changing the FIO until a minimum was found; where the SUT barely enters the accept region. It was determined the FIO was 675/31 = 21.77 failures per interval. Giving a MTTF of 0.046.
+
+The third plot is double the minimum MTTF. This gives a MTTF of 0.092 and a FIO of 337.5/31 = 10.89 failures per inteval. In this case the SUT almost immediately goes into the reject region.
 
 The fourth plot is half the minimum MTTF. This gives a MTTF of 0.023 and a FIO of 1350/31 = 43.55 failures per inteval. In this case the SUT immediately goes into the accept region.
-
 
 Initial RDC plot
 
