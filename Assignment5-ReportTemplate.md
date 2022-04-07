@@ -49,7 +49,7 @@ Intensity Plot
 
 ![Intensity plot](images/intensity.PNG)
 
-As can be seen from the plot, the failure rate and MTTF for the original failure data and the predictions at the last interval (31) are:
+As seen from the plot, the failure rate and mean time to failure (MTTF) for the original failure data and the predictions at the last interval (31) are:
 
 | Dataset        | Failure Rate (F/Interval) | MTTF (intervals) |
 | -------------- | ------------------------- | ---------------- |
@@ -60,13 +60,13 @@ As can be seen from the plot, the failure rate and MTTF for the original failure
 Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
 
 ### Application to Decision-Making given Target Failure Rate
-So how can we utilize the prediction from the models? Businesses who are concerned with their software reliability will have a target failure rate or the mean time to failure that is considered unacceptable.
-For example, if the business deems the acceptable failure rate to be 3 Failures/Interval, then at 31st interval we are still good since the raw data is at 2.96Failures per interval. However, using our Discrete Weibull Type 3 model, we can predict at which interval point in the future that the failure rate may become unacceptable. 
+So how can we utilize the prediction from the models? Businesses that are concerned with their software reliability will have a target failure rate or MTTF that is considered acceptable.
+For example, if the business deems the acceptable failure rate to be 3 Failures/Interval, then at 31st interval this SUT would be considered acceptable as the raw data is at 2.96  failures per interval. However, using the Discrete Weibull Type 3 model, we can predict at which interval in the future the failure rate may become unacceptable. 
 
 ### Advantages/Disadvantages of Reliability Growth Testing
-The advantage for Reliability Growth Testing is that it allows the user to predict the failure behavior using a set of predefined models and using AIC and BIC it is easy to compare which models is the best for the data.
-One disadvantage for the reliability growth testing is that the predictions are very dependent on the subset of data (or ranges) of which the data is used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate. 
-Another disadvantage, comparing to the RDC that we are to discuss next, is that it can only use target failure rate or mttf to gauge the acceptableness, but does not account for more detail such as user and developer’s appetite for risk etc. 
+The advantage for Reliability Growth Testing is that it allows the user to predict the failure behavior using a set of predefined models. Using AIC and BIC it is easy to compare which models best fit the data.
+One disadvantage of reliability growth testing is that the predictions are very dependent on the subset of data (or ranges) used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate. 
+Another disadvantage, comparing to the RDC, that we discuss next, is that it can only use target failure rate or MTTF to gauge the acceptableness, but does not account for more detail such as user and developer’s appetite for risk etc. 
 
 
 ## Assessment using Reliability Demonstration Chart
