@@ -108,17 +108,32 @@ The converted data used for RDC can be found **[here](Data_for_RDC.xlsx)**.
 
 ## Similarity and Differences between the two techniques
 
-The reliability demonstration chart and reliability growth testing are two different methods that measures reliability statistics, but are based on different parameters.
+Similarities between Reliability Growth Testing (RGT) and Reliability Demonstration Chart (RDC) are as listed below.
 
-The reliability demonstration chart failure intensity objective has or has not been met and it is based on the willingness of the customer and developer to accept of falsely saying the failure intensity objective is met when it is not.
+#### Similarities
 
-Reliability growth testing, on the otherhand, helps to predict the failure curve through pre-defined failure curve models.
+1. Both techniques are used to get the reliability statistics of the system.
 
-Although they are used for different purposes, they both rely on the inter-failure times or MTTF.
+2. Both rely on target failure rate or MTTF.
+
+3. Both need failure data to work.
+
+#### Differences
+
+1. RGT is used to make reliability predictions based on exising failure data, whereas RDC is a way of checking whether the target failure rate is met or not in the existing failure data.
+
+2. RGT uses failure curve models to make reliability predictions, whereas RDC uses risk profile to verify the reliability of the system.
+
+3. RGT will simply make predictions based on the failure data and model selected, whereas RDC will determine if the SUT is acceptable based on risk profile.
 
 ## Division of team work
 
-Michael worked on the Assessment using "Reliability Growth Testing" and the "Similarity and Differences between the two techniques" sections.
+| Tester                   | Section                                                     |
+| ------------------------ | ----------------------------------------------------------- |
+| Bhavyai Gupta            | Assessment using RDC, RDC vs RGT, Difficulties & challenges |
+| Drew Burritt             | Assessment using RDC                                        |
+| Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT                            |
+| Okeoghenemarho Obuareghe | TBA                                                         |
 
 ## Difficulties, challenges, and lessons learned
 
