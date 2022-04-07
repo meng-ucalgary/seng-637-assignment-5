@@ -29,17 +29,17 @@ Link to the video demonstration of killed/surviving mutants and is _TBA_.
 
 For Reliability Growth Testing, after testing the tools suggested by the assignment guideline, we decided to utilize the tool C-SFRAT. The reason for choosing C-SFRAT is because the tool has a very user-friendly way to compare the models with different combinations of covariates.
 
-For C-SFRAT, our approach is to first run the entire set of failure data with every model and covariate combination possible, and then figure out which model is best suitable for the behavior of the failure data. (see model_comparison.csv).
+For C-SFRAT, our approach was to first run the entire failure data set with every model and covariate combination possible, and then determine which model is suitable for the behavior of the failure data. (see model_comparison.csv).
 
-For comparing the models, we will be using the AIC and BIC criterias that is computed by C-SFRAT, which are widely used in model selection. The model with the best AIC should have the greatest amount of variation using the fewest possible independent variables, and the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
+For comparing the models, we used Akaike’s Information Criteria(AIC) and Bayesian Information Criteria(BIC) as these are computed by C-SFRAT, these are widely used in model selection. The model with the best AIC should explain the greatest amount of variation using the fewest possible independent variables, the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
 
-BIC, on the otherhand, provides a good estimation on the performance of the model for future data and is also the lower the BIC score the better[[2]](https://stanfordphd.com/BIC.html).
+BIC, on the otherhand, provides a good estimation on the performance of the model for future data, similar to AIC the lower the BIC score the better[[2]](https://stanfordphd.com/BIC.html).
 
-After analyzing the Model Comparison tables from CS-FRAT, we have found the models Discrete Weibull Type 3 with covariate F is the best model with AIC of 122.199 and BIC of 127.935. The second best model is Geometric Model with covariate F with AIC of 125.323 and BIC of 129.625.
+After analyzing the Model Comparison tables from C-SFRAT, we determined that the Discrete Weibull Type 3 model, with covariate F is the best model, with AIC of 122.199 and BIC of 127.935. The second best is the Geometric Model with covariate F with AIC of 125.323 and BIC of 129.625.
 
-After testing with the various ranges on these models, we have found that using subset of 21 out of the full set of 31 (approximately 67-70% of the full failure dataset) and setting the Covariate F as 20 efforts per interval gave us the best performance of the models.
+After testing with the various ranges on these models, we found that using a subset of 21 of the 31 in the full set (approximately 67-70% of the full failure dataset) and setting the Covariate F as 20 efforts per interval gives best performance for the models.
 
-One of the reason that we can think of is that from the 20th interval there has been a huge up-climb of failures and as such using only the subset before interval 20 will not effectively predict the failures with the models.
+One possible reason for this, is that from the 20th interval there is a huge up-climb of failures, and as such using only the subset before interval 20 will not effectively predict the failures with the models.
 
 Time to Failure Plot of the two models:
 
