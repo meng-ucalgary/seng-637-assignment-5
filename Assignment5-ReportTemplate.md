@@ -60,14 +60,15 @@ As seen from the plot, the failure rate and mean time to failure (MTTF) for the 
 Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
 
 ### Application to Decision-Making given Target Failure Rate
+
 So how can we utilize the prediction from the models? Businesses that are concerned with their software reliability will have a target failure rate or MTTF that is considered acceptable.
-For example, if the business deems the acceptable failure rate to be 3 Failures/Interval, then at 31st interval this SUT would be considered acceptable as the raw data is at 2.96  failures per interval. However, using the Discrete Weibull Type 3 model, we can predict at which interval in the future the failure rate may become unacceptable. 
+For example, if the business deems the acceptable failure rate to be 3 Failures/Interval, then at 31st interval this SUT would be considered acceptable as the raw data is at 2.96 failures per interval. However, using the Discrete Weibull Type 3 model, we can predict at which interval in the future the failure rate may become unacceptable.
 
 ### Advantages/Disadvantages of Reliability Growth Testing
-The advantage for Reliability Growth Testing is that it allows the user to predict the failure behavior using a set of predefined models. Using AIC and BIC it is easy to compare which models best fit the data.
-One disadvantage of reliability growth testing is that the predictions are very dependent on the subset of data (or ranges) used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate. 
-Another disadvantage, comparing to the RDC, that we discuss next, is that it can only use target failure rate or MTTF to gauge the acceptableness, but does not account for more detail such as user and developer’s appetite for risk etc. 
 
+The advantage for Reliability Growth Testing is that it allows the user to predict the failure behavior using a set of predefined models. Using AIC and BIC it is easy to compare which models best fit the data.
+One disadvantage of reliability growth testing is that the predictions are very dependent on the subset of data (or ranges) used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate.
+Another disadvantage, comparing to the RDC, that we discuss next, is that it can only use target failure rate or MTTF to gauge the acceptableness, but does not account for more detail such as user and developer’s appetite for risk etc.
 
 ## Assessment using Reliability Demonstration Chart
 
@@ -117,7 +118,7 @@ The converted data used for RDC can be found **[here](Data_for_RDC.xlsx)**.
 4. The fourth plot is half the minimum MTTF. This gives a MTTF of 0.023 and a FIO of 1350/31 = 43.55 failures per inteval. In this case the SUT immediately goes into the accept region.
 
    ![MTTFmin half RDC plot](images/RDC_MTTFhalf.PNG)
-   
+
 ### Advantages/Disadvantages of Reliability Demonstration Chart
 
 One of the advantages of Reliability Demonstration Chart is that it has an easy to understand approach in understanding the failure data whether or not it is acceptable given the risk appetite of the user and the developer.
@@ -127,9 +128,9 @@ Another advantage is that it provides immense detail graphically for decision ma
 One disadvantage is that finding the MTTFmin is a bit tricky and if the value is wrong, then the entire Reliability Demonstration Chart would be proved meaningless.
 Another disadvantage is that normalizing of input events is needed to get the results as intended for the plot.
 
-
 ## Comparison of results
-When comparing the results from both the Reliability Growth Testing and Reliability Demonstration Chart, we must use the same benchmark, and in this case, we use the MTTFmin defined from the Reliability Demonstration Chart section of 0.046 to assess the two results. 
+
+When comparing the results from both the Reliability Growth Testing and Reliability Demonstration Chart, we must use the same benchmark, and in this case, we use the MTTFmin defined from the Reliability Demonstration Chart section of 0.046 to assess the two results.
 
 As determined by RDC, MTTFmin is 0.046, from the Reliability Growth section the MTTF of the SUT is 0.337, there for it would be considered acceptable. However, with the reliability demonstration chart, one can easily see when the observed failures cross into the reject or accept region, making RDC more efficient at determining if the SUT passes.
 Overall, we believe that the two techniques are optimized for different things with the reliability growth testing specialized in predicting the behavior of failure trends and the Reliability Demonstration Chart specialize in the decision making of when testing can stop based on various risk factors.
@@ -159,9 +160,9 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 | Tester                   | Section                                                                          |
 | ------------------------ | -------------------------------------------------------------------------------- |
 | Bhavyai Gupta            | Assessment using RDC, RDC vs RGT, Difficulties & challenges, Comments & feedback |
-| Drew Burritt             | Assessment using RDC                                                             |
-| Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT                                                 |
-| Okeoghenemarho Obuareghe | TBA                                                                              |
+| Drew Burritt             | Assessment using RDC, Difficulties & challenges, Comments & feedback             |
+| Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT, Difficulties & challenges, Comments & feedback |
+| Okeoghenemarho Obuareghe | RGT: Decision making and advantages/Disadvantages                                                                               |
 
 ## Difficulties, challenges, and lessons learned
 
@@ -174,7 +175,7 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
    - Finally, we tested **C-SFRAT** and it worked fine.
 
-2. The given Reliability Demonstration Chart (RDC) data was not in accordance with the given failure data of the SUT. The RDC had to be significantly modified to accept the     necessary number of data points for the given failure data.
+2. The given Reliability Demonstration Chart (RDC) data was not in accordance with the given failure data of the SUT. The RDC had to be significantly modified to accept the necessary number of data points for the given failure data.
 
 3. The RDC chart did not properly graph the accept/continue/reject regions, modifying the risk profile did not change the graph, as above the excel sheet had to be modified.
 
@@ -182,7 +183,8 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
 5. To convert failures per interval to time between failures it was assumed that the failures were uniformly distributed in each interval. However, this is unlikely and therefore the results are likely inaccurate.
 
-6. There was no target MTTF/FIO or risk profile for RDC provided. The default risk profile was assumed, however a different profile could significantly change the results.  This also means that we can't fully determine if the SUT is accpetable. 
+6. There was no target MTTF/FIO or risk profile for RDC provided. The default risk profile was assumed, however a different profile could significantly change the results. This also means that we can't fully determine if the SUT is accpetable.
+
 ## Comments and feedback
 
 1. The assignment description document [`Assignment5.md`](Assignment5.md) is not very detailed this time.
