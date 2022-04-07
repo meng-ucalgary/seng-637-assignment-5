@@ -117,6 +117,16 @@ The converted data used for RDC can be found **[here](Data_for_RDC.xlsx)**.
 4. The fourth plot is half the minimum MTTF. This gives a MTTF of 0.023 and a FIO of 1350/31 = 43.55 failures per inteval. In this case the SUT immediately goes into the accept region.
 
    ![MTTFmin half RDC plot](images/RDC_MTTFhalf.PNG)
+   
+### Advantages/Disadvantages of Reliability Demonstration Chart
+
+One of the advantages of Reliability Demonstration Chart is that it has an easy to understand approach in understanding the failure data whether or not it is acceptable given the risk appetite of the user and the developer.
+
+Another advantage is that it provides immense detail graphically for decision making as to at which interval should we stop testing and either reject or accept the results.
+
+One disadvantage is that finding the MTTFmin is a bit tricky and if the value is wrong, then the entire Reliability Demonstration Chart would be proved meaningless.
+
+
 
 ## Comparison of results
 
