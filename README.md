@@ -6,6 +6,10 @@
 
 - The assignment report is [here](Assignment5-ReportTemplate.md).
 
+- The modified failure data is [here](Data_for_RDC.xlsx).
+
+- The updated RDC to handle all failure data is [here](Reliability_Demonstration_Chart.xlsm).
+
 - The demonstration video is _TBA_.
 
 ## Contributors
