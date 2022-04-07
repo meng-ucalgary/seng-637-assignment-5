@@ -128,12 +128,12 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
 ## Division of team work
 
-| Tester                   | Section                                                     |
-| ------------------------ | ----------------------------------------------------------- |
-| Bhavyai Gupta            | Assessment using RDC, RDC vs RGT, Difficulties & challenges |
-| Drew Burritt             | Assessment using RDC                                        |
-| Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT                            |
-| Okeoghenemarho Obuareghe | TBA                                                         |
+| Tester                   | Section                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------- |
+| Bhavyai Gupta            | Assessment using RDC, RDC vs RGT, Difficulties & challenges, Comments & feedback |
+| Drew Burritt             | Assessment using RDC                                                             |
+| Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT                                                 |
+| Okeoghenemarho Obuareghe | TBA                                                                              |
 
 ## Difficulties, challenges, and lessons learned
 
@@ -146,9 +146,15 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
    - Finally, we tested **C-SFRAT** and it worked fine.
 
+2. The given Reliability Demonstration Chart (RDC) data was not in accordance with the given failure data of the SUT. The RDC had to be modified to accept as many data points as given in the failure data.
+
 ## Comments and feedback
 
-1. The assignment description document [`Assignment5.md`](Assignment5.md) is very detailed and comprehensive, and it was easy to follow.
+1. The assignment description document [`Assignment5.md`](Assignment5.md) is not very detailed this time.
+
+2. One of the recommended software **SRTAT-SRE-tool** is very hard to use. There is no documentation available for it as well.
+
+3. The Reliability Demonstration Chart should have allowed input of all the failure data.
 
 ## Contributors
 
