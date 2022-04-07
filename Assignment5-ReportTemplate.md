@@ -125,7 +125,7 @@ One of the advantages of Reliability Demonstration Chart is that it has an easy 
 Another advantage is that it provides immense detail graphically for decision making as to at which interval should we stop testing and either reject or accept the results.
 
 One disadvantage is that finding the MTTFmin is a bit tricky and if the value is wrong, then the entire Reliability Demonstration Chart would be proved meaningless.
-Another disadvantage is that normalizing of input events is needed to get the results as intended for the plote.
+Another disadvantage is that normalizing of input events is needed to get the results as intended for the plot.
 
 
 ## Comparison of results
