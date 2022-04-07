@@ -129,6 +129,10 @@ Another disadvantage is that normalizing of input events is needed to get the re
 
 
 ## Comparison of results
+When comparing the results from both the Reliability Growth Testing and Reliability Demonstration Chart, we must use the same benchmark, and in this case, we use the MTTFmin defined from the Reliability Demonstration Chart section of 0.046 to assess the two results. 
+
+As can be seen from the RDC plot of MTTFmin and that the MTTF is 0.337 from the Reliability Growth section, both would consider a pass. However, with the reliability demonstration chart, one can easily find when observed failures is deemed acceptable and further testing is not needed. Meaning that RDC is more efficient.
+Overall, we believe that the two techniques are optimized for different things with the reliability growth testing specialized in predicting the behavior of failure trends and the Reliability Demonstration Chart specialize in the decision making of when testing can stop based on various risk factors.
 
 ## Similarity and Differences between the two techniques
 
