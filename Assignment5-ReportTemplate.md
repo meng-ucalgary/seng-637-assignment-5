@@ -17,6 +17,10 @@
 
 ## Introduction
 
+In this assignment we will explore the use of Reliability Growth Testing (RGT) and Reliability Demonstration Chart (RDC) to assess the reliability of a software system.
+
+Then we will compare these techniques to see what they are like and how they are different from one another.
+
 ## Video demo
 
 Link to the video demonstration of killed/surviving mutants and is _TBA_.
