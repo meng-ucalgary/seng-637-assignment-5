@@ -23,7 +23,7 @@ Then we will compare these techniques to see what they are like and how they are
 
 ## Video demo
 
-Link to the video demonstration of killed/surviving mutants and is _TBA_.
+Link to the video demonstration of reliability assessment and is _TBA_.
 
 ## Assessment using Reliability Growth Testing
 
@@ -31,7 +31,7 @@ For Reliability Growth Testing, after testing the tools suggested by the assignm
 
 For C-SFRAT, our approach was to first run the entire failure data set with every model and covariate combination possible, and then determine which model is suitable for the behavior of the failure data. (see model_comparison.csv).
 
-For comparing the models, we used Akaike’s Information Criteria(AIC) and Bayesian Information Criteria(BIC) as these are computed by C-SFRAT, these are widely used in model selection. The model with the best AIC should explain the greatest amount of variation using the fewest possible independent variables, the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
+For comparing the models, we used Akaike's Information Criteria (AIC) and Bayesian Information Criteria (BIC) as these are computed by C-SFRAT, these are widely used in model selection. The model with the best AIC should explain the greatest amount of variation using the fewest possible independent variables, the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
 
 BIC, on the otherhand, provides a good estimation on the performance of the model for future data, similar to AIC the lower the BIC score the better[[2]](https://stanfordphd.com/BIC.html).
 
@@ -59,16 +59,23 @@ As seen from the plot, the failure rate and mean time to failure (MTTF) for the 
 
 Using interval 21 for DW3 and GM models to predict the last 10 intervals, the failure rate and MTTF are very close to the original failure data.
 
-### Application to Decision-Making given Target Failure Rate
+#### Decision making based on given Target Failure Rate
 
 So how can we utilize the prediction from the models? Businesses that are concerned with their software reliability will have a target failure rate or MTTF that is considered acceptable.
+
 For example, if the business deems the acceptable failure rate to be 3 Failures/Interval, then at 31st interval this SUT would be considered acceptable as the raw data is at 2.96 failures per interval. However, using the Discrete Weibull Type 3 model, we can predict at which interval in the future the failure rate may become unacceptable.
 
-### Advantages/Disadvantages of Reliability Growth Testing
+#### Advantages and Disadvantages of Reliability Growth Testing
 
-The advantage for Reliability Growth Testing is that it allows the user to predict the failure behavior using a set of predefined models. Using AIC and BIC it is easy to compare which models best fit the data.
-One disadvantage of reliability growth testing is that the predictions are very dependent on the subset of data (or ranges) used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate.
-Another disadvantage, comparing to the RDC, that we discuss next, is that it can only use target failure rate or MTTF to gauge the acceptableness, but does not account for more detail such as user and developer’s appetite for risk etc.
+**Advantages**
+
+- RGT allows the user to predict the failure behavior using a set of predefined models. Using AIC and BIC it is easy to compare which models best fit the data.
+
+**Disadvantages**
+
+- Predictions are dependent on the subset of data (or ranges) used for the prediction. For example, if there are some distortions or outliers of data within the subset of data, the predictions might not be accurate.
+
+- Predictions are dependent on the model used. For example, if the model is not appropriate for the data, the predictions may not be accurate.
 
 ## Assessment using Reliability Demonstration Chart
 
@@ -119,14 +126,21 @@ The converted data used for RDC can be found **[here](Data_for_RDC.xlsx)**.
 
    ![MTTFmin half RDC plot](images/RDC_MTTFhalf.PNG)
 
-### Advantages/Disadvantages of Reliability Demonstration Chart
+#### Advantages and disadvantages of Reliability Demonstration Chart
 
-One of the advantages of Reliability Demonstration Chart is that it has an easy to understand approach in understanding the failure data whether or not it is acceptable given the risk appetite of the user and the developer.
+**Advantages**
 
-Another advantage is that it provides immense detail graphically for decision making as to at which interval should we stop testing and either reject or accept the results.
+- Easy to understand in determining whether the SUT is acceptable or not given the risk appetite of the user and the developer.
 
-One disadvantage is that finding the MTTFmin is a bit tricky and if the value is wrong, then the entire Reliability Demonstration Chart would be proved meaningless.
-Another disadvantage is that normalizing of input events is needed to get the results as intended for the plot.
+- RDC is time and cost efficient as it requires simple data processing and plotting.
+
+- Another advantage is that it provides graphical details for decision making as to at which interval should we stop testing and either reject or accept the results.
+
+**Disadvantages**
+
+- It cannot be used to calculate the exact quantitative value for the reliability (or availability) of the SUT.
+
+- Finding the MTTFmin can be a bit tricky and if the value is wrong, then the entire RDC would be proved meaningless.
 
 ## Comparison of results
 
@@ -162,7 +176,7 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 | Bhavyai Gupta            | Assessment using RDC, RDC vs RGT, Difficulties & challenges, Comments & feedback |
 | Drew Burritt             | Assessment using RDC, Difficulties & challenges, Comments & feedback             |
 | Michael Man Yin Lee      | Assessment using RGT, RDC vs RGT, Difficulties & challenges, Comments & feedback |
-| Okeoghenemarho Obuareghe | RGT: Decision making and advantages/Disadvantages                                                                               |
+| Okeoghenemarho Obuareghe | RGT: Decision making and advantages/disadvantages                                |
 
 ## Difficulties, challenges, and lessons learned
 
