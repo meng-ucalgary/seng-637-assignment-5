@@ -23,7 +23,7 @@ Then we will compare these techniques to see what they are like and how they are
 
 ## Video demo
 
-Link to the video demonstration of reliability assessment and is _TBA_.
+Link to the video demonstration of reliability assessment is [here](https://youtu.be/AJ92UJkDHzY).
 
 ## Assessment using Reliability Growth Testing
 

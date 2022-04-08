@@ -10,7 +10,7 @@
 
 - The updated RDC to handle all failure data is [here](Reliability_Demonstration_Chart.xlsm).
 
-- The demonstration video is _TBA_.
+- The demonstration video is [here](https://youtu.be/AJ92UJkDHzY).
 
 ## Contributors
 
