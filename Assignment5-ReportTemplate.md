@@ -29,7 +29,7 @@ Link to the video demonstration of reliability assessment is [here](https://yout
 
 For Reliability Growth Testing, after testing the tools suggested by the assignment guideline, we decided to utilize the tool C-SFRAT. The reason for choosing C-SFRAT is because the tool has a very user-friendly way to compare the models with different combinations of covariates.
 
-For C-SFRAT, our approach was to first run the entire failure data set with every model and covariate combination possible, and then determine which model is suitable for the behavior of the failure data. (see model_comparison.csv).
+For C-SFRAT, our approach was to first run the entire failure data set with every model and covariate combination possible, and then determine which model is suitable for the behavior of the failure data. See [model_comparison.csv](modified_artifacts/C_SFRAT_Model_Comparison.csv).
 
 For comparing the models, we used Akaike's Information Criteria (AIC) and Bayesian Information Criteria (BIC) as these are computed by C-SFRAT, these are widely used in model selection. The model with the best AIC should explain the greatest amount of variation using the fewest possible independent variables, the lower the AIC score, the better[[1]](https://www.scribbr.com/statistics/akaike-information-criterion/).
 
