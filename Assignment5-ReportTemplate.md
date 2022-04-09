@@ -202,7 +202,7 @@ Similarities between Reliability Growth Testing (RGT) and Reliability Demonstrat
 
 ## Comments and feedback
 
-1. The assignment description document [`Assignment5.md`](Assignment5.md) is not very detailed this time.
+1. The assignment description document [`Assignment_Description.md`](Assignment_Description.md) is not very detailed this time.
 
 2. One of the recommended software **SRTAT-SRE-tool** is very hard to use. There is no documentation available for it as well.
 
